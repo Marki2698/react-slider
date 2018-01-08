@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#slider {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+.btn {
+    position: relative;
+    font-size: 7em;
+    width: 10%;
+    z-index: 100;
+}
+
+.flex-slider {
+    display: block;
+    float: left;
+    /* justify-content: flex-start; */
+    position: relative;
+    width: 80%;
+    height: 200px;
+    left: 0px;
+    /* right: -800px; */
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+.test-div {
+    /* position: relative; */
+    width: 10000px;
+    /* left: 0px; */
+    /* right: -100px; */
+    /* overflow-x: scroll; */
+}
+
+.slider-item {
+    background-color: skyblue;
+    position: relative;
+    width: 2%;
+    height: 170px;
+    margin: 0px .05%;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.name-item, .price-item {
+    /* display: block; */
+    position: relative;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+.another-test {
+    position: relative;
+    width: 20px;
+    height: 50px;
+    background-color: skyblue;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.another-test p {
+    position: relative;
+    width: 100%;
+}
+
+/* .clearBoth {
+    clear: both;
+} */
