@@ -50,12 +50,13 @@ body {
     overflow-y: hidden;
 }
 
-.name-item, .price-item {
-    /* display: block; */
+.name-item, .price-item, .anchor-image {
+    display: block;
     position: relative;
     width: 100%;
     /* overflow-x: hidden; */
 }
+
 
 .another-test {
     position: relative;

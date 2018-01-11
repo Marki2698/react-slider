@@ -14,11 +14,9 @@ import React from "react";
 class Arrow extends React.Component {
     constructor(props) {
         super(props);
-        //this.current = 0;
         this.state = {
             first: 0,
             last: 3,
-            copy: null,
             isLeftEmpty: true,
             isRightEmpty: false
         };
@@ -48,7 +46,6 @@ class Arrow extends React.Component {
                 let current = document.querySelector("div.first");
                 
                 this.setState({
-                    //copy: current.cloneNode(true),
                     first: this.state.first === items.length - 1 ? 0 : this.state.first + 1,
                     last: this.state.last === items.length - 1 ? 0 : this.state.last + 1
                 })
@@ -65,19 +62,7 @@ class Arrow extends React.Component {
                 parent.appendChild(current);
             }
         } else {
-            /* if(this.state.isRightEmpty) {
-                for(let item of items) {
-                    $(item).animate({
-                        left: `+=${width + 2*oneMargin}`
-                    }, 500);
-                }
-                
-                this.setState({
-                    first: this.state.first + 1,
-                    last: this.state.last + 1,
-                    isLeftEmpty: !this.state.isLeftEmpty
-                });
-            } */
+        
             let parent = document.querySelector("div.test-div");
             let last = parent.lastChild;
             parent.removeChild(last);
@@ -90,30 +75,13 @@ class Arrow extends React.Component {
                 left: `-${width + 2*oneMargin}`,
                 display: "block"
             });
-            /* $(firstElem).animate({
-                // display: "block",
-                left: 0
-            }, 500); */
-
-
 
             this.setState({
                 first: this.state.first === 0 ? items.length - 1 : this.state.first - 1,
                 last: this.state.last === 0 ? items.length - 1 : this.state.last - 1
             });
-           /*  let copy = items.item(this.state.last).cloneNode(true);
-            //items.item(this.state.last).parentElement.removeChild(items.item(this.state.last));
-            this.setState({
-                first: this.state.first - 1,
-                last: this.state.last - 1,
-                copy: copy
-            });
-            for(let item of items) {
-                item.style.left = `${currentLeft + width + 2*oneMargin}px`;
-            } */
+           
         }
-        //this.setState({first: current})
-        
     }
 }
 
