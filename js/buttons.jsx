@@ -1,16 +1,5 @@
 import React from "react";
 
-/* const Forward_arrow = () => 
-    <div className="btn" onClick={(e) => this.Move(e)}>
-        <span className="forward-btn">&gt;</span>
-    </div> */;
-
-/* const Back_arrow = () => 
-    <div className="back-btn">
-        <span className="btn">&lt;</span>
-    </div>; */
-
-
 class Arrow extends React.Component {
     constructor(props) {
         super(props);
@@ -62,7 +51,7 @@ class Arrow extends React.Component {
                 parent.appendChild(current);
             }
         } else {
-        
+            
             let parent = document.querySelector("div.test-div");
             let last = parent.lastChild;
             parent.removeChild(last);
